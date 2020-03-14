@@ -8,9 +8,10 @@ class MusicTable extends Component {
 
   render() {
     return (
-      <table className="table">
+      <table className="table table-hover table-sm">
         <thead className="thead-dark">
           <tr>
+            <th> </th>
             <th>Title</th>
             <th>Artist</th>
             <th>Album</th>
@@ -21,6 +22,7 @@ class MusicTable extends Component {
         <tbody>
           {this.state.musics.map(music => (
             <tr key={music._id}>
+              <td>{this.state.musics.indexOf(music) + 1}</td>
               <th>{music.title}</th>
               <td>{music.artist}</td>
               <td>{music.album}</td>
