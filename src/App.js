@@ -13,21 +13,11 @@ class App extends Component {
             <Buttons />
           </div>
           <div class="col">
-            <div
-              id="carouselExampleIndicators"
-              class="carousel slide"
-              data-ride="carousel"
-            >
+            <div id="dynamicSite" class="carousel slide" data-ride="carousel">
               <ol className="carousel-indicators">
-                <li data-target="#carouselExampleIndicators"></li>
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="1"
-                ></li>
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="2"
-                ></li>
+                <li data-target="#dynamicSite"></li>
+                <li data-target="#dynamicSite" data-slide-to="1"></li>
+                <li data-target="#dynamicSite" data-slide-to="2"></li>
               </ol>
               <div className="carousel-inner">
                 <div className="carousel-item active">
@@ -42,7 +32,7 @@ class App extends Component {
               </div>
               <a
                 class="carousel-control-prev"
-                href="#carouselExampleIndicators"
+                href="#dynamicSite"
                 role="button"
                 data-slide="prev"
               >
@@ -54,7 +44,7 @@ class App extends Component {
               </a>
               <a
                 class="carousel-control-next"
-                href="#carouselExampleIndicators"
+                href="#dynamicSite"
                 role="button"
                 data-slide="next"
               >

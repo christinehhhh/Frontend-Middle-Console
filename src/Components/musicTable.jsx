@@ -1,9 +1,18 @@
 import React, { Component } from "react";
 import { getMusics } from "./fakeMusicService";
+import Like from "./common/like";
 
 class MusicTable extends Component {
   state = {
     musics: getMusics()
+  };
+
+  handleLike = music => {
+    const musics = [...this.state.musics];
+    const index = musics.indexOf(music);
+    musics[index] = { ...musics[index] };
+    musics[index].liked = !musics[index].liked;
+    this.setState({ musics });
   };
 
   render() {
@@ -15,6 +24,7 @@ class MusicTable extends Component {
             <th>Title</th>
             <th>Artist</th>
             <th>Album</th>
+            <th></th>
             <th>Time</th>
             <th>Genre</th>
           </tr>
@@ -26,6 +36,12 @@ class MusicTable extends Component {
               <th>{music.title}</th>
               <td>{music.artist}</td>
               <td>{music.album}</td>
+              <td>
+                <Like
+                  liked={music.liked}
+                  onClick={() => this.handleLike(music)}
+                />
+              </td>
               <td>{music.time}</td>
               <td>{music.genre.name}</td>
             </tr>
