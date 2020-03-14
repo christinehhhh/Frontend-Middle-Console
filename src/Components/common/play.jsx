@@ -1,15 +1,21 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Play extends Component {
-  render() {
-    return (
-      <i
-        style={{ cursor: "pointer" }}
-        className="fa fa-play"
-        aria-hidden="true"
-      ></i>
-    );
+const Play = props => {
+  let classes = "fa fa-";
+  if (props.played !== true) {
+    classes += "play";
+  } else {
+    classes += "pause";
   }
-}
+
+  return (
+    <i
+      onClick={props.onClick}
+      style={{ cursor: "pointer" }}
+      className={classes}
+      aria-hidden="true"
+    ></i>
+  );
+};
 
 export default Play;

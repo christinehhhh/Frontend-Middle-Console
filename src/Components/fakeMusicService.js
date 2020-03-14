@@ -7,7 +7,8 @@ const musics = [
     genre: { _id: "5b21ca3eeb7f6fbccd471818", name: "Rock" },
     artist: "The Beatles",
     album: "Sgt. Peppers Lonely Hearts Club Band",
-    time: "5:31"
+    time: "5:31",
+    url: "./musics/The Beatles-A Day In the Life.mp3"
   },
   {
     _id: "5b21ca3eeb7f6fbccd471816",
@@ -15,7 +16,8 @@ const musics = [
     genre: { _id: "5b21ca3eeb7f6fbccd471818", name: "Rock" },
     artist: "ONE OK ROCK",
     album: "Zeitakubyō",
-    time: "3:22"
+    time: "3:22",
+    url: "./musics/ONE OK ROCK (ワンオクロック)-欲望に満ちた青年団.mp3"
   },
   {
     _id: "5b21ca3eeb7f6fbccd471817",
@@ -23,7 +25,8 @@ const musics = [
     genre: { _id: "5b21ca3eeb7f6fbccd471820", name: "Soundtrack" },
     artist: "Marcy",
     album: "Adventure Time",
-    time: "1:35"
+    time: "1:35",
+    url: "./musics/Adventure Time,Olivia Olson-Everything Stays.mp3"
   },
 
   {
@@ -32,7 +35,8 @@ const musics = [
     genre: { _id: "5b21ca3eeb7f6fbccd471814", name: "Pop" },
     artist: "WINNER",
     album: "OUR TWENTY FOR",
-    time: "3:27"
+    time: "3:27",
+    url: "./musics/WINNER (위너)-ISLAND (Korean Ver.).mp3"
   },
   {
     _id: "5b21ca3eeb7f6fbccd47181a",
@@ -40,15 +44,17 @@ const musics = [
     genre: { _id: "5b21ca3eeb7f6fbccd471814", name: "Pop" },
     artist: "Ed Sheeran",
     album: "÷",
-    time: "3:53"
+    time: "3:53",
+    url: "./musics/Ed Sheeran-Shape of You.mp3"
   },
   {
     _id: "5b21ca3eeb7f6fbccd47181b",
-    title: "Hypnothised",
+    title: "Hypnotised",
     genre: { _id: "5b21ca3eeb7f6fbccd471814", name: "Pop" },
     artist: "Years & Years",
     album: "Palo Santo",
-    time: "4:03"
+    time: "4:03",
+    url: "./musics/Years & Years-Hypnotised.mp3"
   },
   {
     _id: "5b21ca3eeb7f6fbccd47181e",
@@ -56,23 +62,26 @@ const musics = [
     genre: { _id: "5b21ca3eeb7f6fbccd471820", name: "Soundtrack" },
     artist: "Ennio Morricone",
     album: "Inglourious Basterds",
-    time: "2:35"
+    time: "2:35",
+    url: "./musics/Ennio Morricone-Un Amico (Album Version).mp3"
   },
   {
     _id: "5b21ca3eeb7f6fbccd47181f",
-    title: "Everyday",
+    title: "Apple Blossom",
     genre: { _id: "5b21ca3eeb7f6fbccd471820", name: "Soundtrack" },
-    artist: "Danny Elfman",
-    album: "Big Fish",
-    time: "2:09"
+    artist: "The White Stripes",
+    album: "The Hateful Eight",
+    time: "2:13",
+    url: "./musics/The White Stripes-Apple Blossom.mp3"
   },
   {
     _id: "5b21ca3eeb7f6fbccd471821",
-    title: "Don't Bother Me",
+    title: "Everybody Knows I Love You",
     genre: { _id: "5b21ca3eeb7f6fbccd471818", name: "Rock" },
-    artist: "The Beatles",
-    album: "With the Beatles",
-    time: "2:28"
+    artist: "Lovebugs",
+    album: "Only Forever",
+    time: "3:15",
+    url: "./musics/Lovebugs-Everybody Knows I LoveYou (Radio Edit).mp3"
   }
 ];
 

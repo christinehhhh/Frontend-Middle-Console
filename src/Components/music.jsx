@@ -16,6 +16,22 @@ class Music extends Component {
     this.setState({ musics });
   };
 
+  handlePlay = music => {
+    const musics = [...this.state.musics];
+    const index = musics.indexOf(music);
+    musics[index] = { ...music[index] };
+    musics[index].played = !musics[index].played;
+    // let audio = new Audio(musics[index].url);
+    // if (this.state === "played") {
+    //   var status = "paused";
+    //   audio.play();
+    // } else {
+    //   var status = "played";
+    //   audio.pause();
+    // }
+    this.setState({ musics });
+  };
+
   render() {
     return (
       <table className="table table-hover table-sm table-striped">
@@ -37,7 +53,10 @@ class Music extends Component {
               <td>{this.state.musics.indexOf(music) + 1}</td>
               <th>{music.title}</th>
               <th>
-                <Play />
+                <Play
+                  played={music.played}
+                  onClick={() => this.handlePlay(music)}
+                />
               </th>
               <td>{music.artist}</td>
               <td>{music.album}</td>
