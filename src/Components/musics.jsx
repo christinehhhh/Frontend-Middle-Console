@@ -3,12 +3,18 @@ import { getMusics } from "./fakeMusicService";
 import Like from "./common/like";
 import Play from "./common/play";
 
-class Music extends Component {
+class Musics extends Component {
   state = {
-    musics: getMusics()
+    musics: []
   };
 
+  componentDidMount() {
+    this.setState({ musics: getMusics() });
+  }
+
   handleLike = music => {
+    console.log("Playbutton Clicked");
+
     const musics = [...this.state.musics];
     const index = musics.indexOf(music);
     musics[index] = { ...musics[index] };
@@ -19,8 +25,9 @@ class Music extends Component {
   handlePlay = music => {
     const musics = [...this.state.musics];
     const index = musics.indexOf(music);
-    musics[index] = { ...music[index] };
+    musics[index] = { ...musics[index] };
     musics[index].played = !musics[index].played;
+    this.setState({ musics });
     // let audio = new Audio(musics[index].url);
     // if (this.state === "played") {
     //   var status = "paused";
@@ -29,7 +36,6 @@ class Music extends Component {
     //   var status = "played";
     //   audio.pause();
     // }
-    this.setState({ musics });
   };
 
   render() {
@@ -52,12 +58,12 @@ class Music extends Component {
             <tr key={music._id}>
               <td>{this.state.musics.indexOf(music) + 1}</td>
               <th>{music.title}</th>
-              <th>
+              <td>
                 <Play
                   played={music.played}
                   onClick={() => this.handlePlay(music)}
                 />
-              </th>
+              </td>
               <td>{music.artist}</td>
               <td>{music.album}</td>
               <td>
@@ -76,4 +82,4 @@ class Music extends Component {
   }
 }
 
-export default Music;
+export default Musics;

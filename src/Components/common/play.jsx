@@ -2,11 +2,8 @@ import React from "react";
 
 const Play = props => {
   let classes = "fa fa-";
-  if (props.played !== true) {
-    classes += "play";
-  } else {
-    classes += "pause";
-  }
+  if (!props.played) classes += "play";
+  else classes += "pause";
 
   return (
     <i

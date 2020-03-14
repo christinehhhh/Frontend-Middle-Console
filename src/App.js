@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Music from "./components/music";
+import Musics from "./components/musics";
 import Buttons from "./components/buttons";
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
             <Buttons />
           </div>
           <div className="col">
-            <Music />
+            <Musics />
           </div>
         </div>
       </form>
