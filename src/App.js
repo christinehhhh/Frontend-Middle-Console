@@ -1,61 +1,66 @@
 import React, { Component } from "react";
 import "./App.css";
-import MusicTable from "./components/musicTable";
+import Music from "./components/music";
 import Buttons from "./components/buttons";
+import Login from "./components/login";
 
 class App extends Component {
   state = {};
   render() {
     return (
       <form>
-        <div class="row">
-          <div class="col">
+        <div className="row">
+          <div className="col">
             <Buttons />
           </div>
-          <div class="col">
-            <div id="dynamicSite" class="carousel slide" data-ride="carousel">
+          <div className="col">
+            <div
+              id="dynamicSite"
+              className="carousel slide"
+              data-ride="carousel"
+            >
               <ol className="carousel-indicators">
-                <li data-target="#dynamicSite"></li>
+                <li
+                  data-target="#dynamicSite"
+                  data-slide-to="0"
+                  className="active"
+                ></li>
                 <li data-target="#dynamicSite" data-slide-to="1"></li>
                 <li data-target="#dynamicSite" data-slide-to="2"></li>
               </ol>
               <div className="carousel-inner">
                 <div className="carousel-item active">
-                  <MusicTable />
+                  <Music />
                 </div>
                 <div className="carousel-item">
-                  <img src="..." class="d-block w-100" alt="..." />
-                </div>
-                <div className="carousel-item">
-                  <img src="..." class="d-block w-100" alt="..." />
+                  <Login />
                 </div>
               </div>
               <a
-                class="carousel-control-prev"
+                className="carousel-control-prev"
                 href="#dynamicSite"
                 role="button"
                 data-slide="prev"
               >
                 <span
-                  class="carousel-control-prev-icon"
+                  className="carousel-control-prev-icon"
                   aria-hidden="true"
                 ></span>
-                <span class="sr-only">Previous</span>
+                <span className="sr-only">Previous</span>
               </a>
               <a
-                class="carousel-control-next"
+                className="carousel-control-next"
                 href="#dynamicSite"
                 role="button"
                 data-slide="next"
               >
                 <span
-                  class="carousel-control-next-icon"
+                  className="carousel-control-next-icon"
                   aria-hidden="true"
                 ></span>
-                <span class="sr-only">Next</span>
+                <span className="sr-only">Next</span>
               </a>
             </div>
-            {/* <MusicTable /> */}
           </div>
         </div>
       </form>

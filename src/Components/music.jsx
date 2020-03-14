@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { getMusics } from "./fakeMusicService";
 import Like from "./common/like";
+import Play from "./common/play";
 
-class MusicTable extends Component {
+class Music extends Component {
   state = {
     musics: getMusics()
   };
@@ -22,6 +23,7 @@ class MusicTable extends Component {
           <tr>
             <th> </th>
             <th>Title</th>
+            <th></th>
             <th>Artist</th>
             <th>Album</th>
             <th></th>
@@ -34,6 +36,9 @@ class MusicTable extends Component {
             <tr key={music._id}>
               <td>{this.state.musics.indexOf(music) + 1}</td>
               <th>{music.title}</th>
+              <th>
+                <Play />
+              </th>
               <td>{music.artist}</td>
               <td>{music.album}</td>
               <td>
@@ -52,4 +57,4 @@ class MusicTable extends Component {
   }
 }
 
-export default MusicTable;
+export default Music;
