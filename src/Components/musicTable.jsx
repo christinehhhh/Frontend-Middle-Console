@@ -8,7 +8,7 @@ class MusicTable extends Component {
 
   render() {
     return (
-      <table className="table table-hover table-sm">
+      <table className="table table-hover table-sm table-striped">
         <thead className="thead-dark">
           <tr>
             <th> </th>
