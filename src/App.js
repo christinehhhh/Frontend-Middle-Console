@@ -5,8 +5,7 @@ import Buttons from "./components/buttons";
 import Login from "./components/login";
 import NotFound from "./components/notFound";
 import LightSelector from "./components/lightSelector";
-import DarkModeToggle from "./components/common/darkModeToggle";
-import "./styles.scss";
+import Navbar from "./components/navbar";
 import "./App.css";
 
 class App extends Component {
@@ -14,7 +13,9 @@ class App extends Component {
   render() {
     return (
       <form>
-        <DarkModeToggle />
+        <div className="row">
+          <div className="col">{/* <Navbar /> */}</div>
+        </div>
         <div className="row">
           <div className="col">
             <Buttons />
