@@ -1,38 +1,43 @@
-import React, { Component } from "react";
+import React from "react";
+import { NavLink } from "react-router-dom";
 import Map from "./Images/map.png";
-import Music from "./Images/music.png";
-import Settings from "./Images/setting.png";
+import Musics from "./Images/musics.png";
+import Login from "./Images/login.png";
 import LightOn from "./Images/Turn on light.png";
 import LightOff from "./Images/Turn off light.png";
 
 const picsHeight = window.innerHeight / 6;
 
-class Buttons extends Component {
-  render() {
-    return (
-      <div
-        className="btn-group-vertical"
-        role="group"
-        aria-label="Vertical button group"
-      >
-        <button type="button" className="btn btn-circle">
+const Buttons = () => {
+  return (
+    <ul className="nav flex-column">
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/map">
           <img height={picsHeight} src={Map} alt="" />
-        </button>
-        <button type="button" className="btn btn-circle">
-          <img height={picsHeight} src={Music} alt="" />
-        </button>
-        <button type="button" className="btn btn-circle">
-          <img height={picsHeight} src={Settings} alt="" />
-        </button>
-        <button type="button" className="btn btn-circle">
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/musics">
+          <img height={picsHeight} src={Musics} alt="" />
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/login">
+          <img height={picsHeight} src={Login} alt="" />
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/light-on">
           <img height={picsHeight} src={LightOn} alt="" />
-        </button>
-        <button type="button" className="btn btn-circle">
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/light-off">
           <img height={picsHeight} src={LightOff} alt="" />
-        </button>
-      </div>
-    );
-  }
-}
+        </NavLink>
+      </li>
+    </ul>
+  );
+};
 
 export default Buttons;

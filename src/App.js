@@ -1,7 +1,10 @@
 import React, { Component } from "react";
-import "./App.css";
+import { Switch, Route, Redirect } from "react-router-dom";
 import Musics from "./components/musics";
 import Buttons from "./components/buttons";
+import Login from "./components/login";
+import NotFound from "./components/notFound";
+import "./App.css";
 
 class App extends Component {
   state = {};
@@ -13,7 +16,14 @@ class App extends Component {
             <Buttons />
           </div>
           <div className="col">
-            <Musics />
+            <main className="container" />
+            <Switch>
+              <Route path="/musics" component={Musics} />
+              <Route path="/login" component={Login} />
+              <Route path="/not-found" component={NotFound} />
+              <Redirect from="/" exact to="/login" />
+              <Redirect to="/not-found" />
+            </Switch>
           </div>
         </div>
       </form>
