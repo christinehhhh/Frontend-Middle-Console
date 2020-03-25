@@ -1,12 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Map from "./Images/map.png";
-import Musics from "./Images/musics.png";
-import Login from "./Images/login.png";
-import LightOn from "./Images/Turn on light.png";
-import LightOff from "./Images/Turn off light.png";
+import Map from "./images/map.png";
+import Musics from "./images/musics.png";
+import Login from "./images/login.png";
+import LightOn from "./images/Turn on light.png";
+import LightOff from "./images/Turn off light.png";
+import ColorPicker from "./images/colorPicker.png";
 
-const picsHeight = window.innerHeight / 6;
+const picsHeight = window.innerHeight / 7;
 
 const Buttons = () => {
   return (
@@ -34,6 +35,11 @@ const Buttons = () => {
       <li className="nav-item">
         <NavLink className="nav-link" to="/light-off">
           <img height={picsHeight} src={LightOff} alt="" />
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/color-picker">
+          <img height={picsHeight} src={ColorPicker} alt="" />
         </NavLink>
       </li>
     </ul>

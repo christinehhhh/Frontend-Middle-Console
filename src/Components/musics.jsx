@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { getMusics } from "./fakeMusicService";
 import Like from "./common/like";
 import Play from "./common/play";
+import { getMusics } from "./fakeMusicService";
 // import ProgressBar from "./progressBar";
 
-class Music extends Component {
+class Musics extends Component {
   state = {
     musics: getMusics()
   };
@@ -72,4 +72,4 @@ class Music extends Component {
   }
 }
 
-export default Music;
+export default Musics;
