@@ -12,7 +12,6 @@
     "react": "^16.13.0",
     "react-color": "^2.18.0",
     "react-dom": "^16.13.0",
-    "react-responsive-music-player": "^0.4.3",
     "react-router-dom": "^4.3.1",
     "react-scripts": "3.4.0",
     "use-dark-mode": "^2.3.1"

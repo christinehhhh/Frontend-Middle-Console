@@ -28,7 +28,7 @@ class Clock extends Component {
   }
 
   render() {
-    return <h6 align="right">{this.state.time.toLocaleTimeString()}</h6>;
+    return <h6 align="center">{this.state.time.toLocaleTimeString()}</h6>;
   }
 }
 

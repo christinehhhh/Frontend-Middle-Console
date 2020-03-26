@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Like from "./common/like";
 import Play from "./common/play";
 import { getMusics } from "./fakeMusicService";
-// import ProgressBar from "./progressBar";
 
 class Musics extends Component {
   state = {
@@ -66,7 +65,6 @@ class Musics extends Component {
             ))}
           </tbody>
         </table>
-        {/* <ProgressBar /> */}
       </React.Fragment>
     );
   }
