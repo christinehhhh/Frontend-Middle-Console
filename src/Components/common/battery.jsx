@@ -4,7 +4,7 @@ class Battery extends Component {
   constructor() {
     super();
     this.state = {
-      battery: 26
+      battery: 48
     };
   }
 
@@ -37,23 +37,33 @@ class Battery extends Component {
     }
 
     return (
-      <div align="center">
-        {(() => {
-          switch (tmp) {
-            case 0:
-              return <i class="fa fa-battery-full" aria-hidden="true" />;
-            case 1:
-              return (
-                <i class="fa fa-battery-three-quarters" aria-hidden="true" />
-              );
-            case 2:
-              return <i class="fa fa-battery-half" aria-hidden="true" />;
-            case 3:
-              return <i class="fa fa-battery-quarter" aria-hidden="true" />;
-            default:
-              return <i class="fa fa-battery-empty" aria-hidden="true" />;
-          }
-        })()}
+      <div align="right">
+        <div className="row">
+          <div className="col-sm-2">
+            {(() => {
+              switch (tmp) {
+                case 0:
+                  return <i class="fa fa-battery-full" aria-hidden="true" />;
+                case 1:
+                  return (
+                    <i
+                      class="fa fa-battery-three-quarters"
+                      aria-hidden="true"
+                    />
+                  );
+                case 2:
+                  return <i class="fa fa-battery-half" aria-hidden="true" />;
+                case 3:
+                  return <i class="fa fa-battery-quarter" aria-hidden="true" />;
+                default:
+                  return <i class="fa fa-battery-empty" aria-hidden="true" />;
+              }
+            })()}
+          </div>
+          <div className="col-sm-1">
+            <h7>{bat}%</h7>
+          </div>
+        </div>
       </div>
     );
   }

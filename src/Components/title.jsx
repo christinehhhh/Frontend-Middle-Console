@@ -7,7 +7,7 @@ import "../styles.scss";
 const Title = () => {
   return (
     <div className="row">
-      <div className="col-sm-4">
+      <div className="col-sm-5">
         <DarkModeToggle />
       </div>
       <div className="col">

@@ -6,6 +6,7 @@ import Login from "./components/login";
 import NotFound from "./components/notFound";
 import LightSelector from "./components/lightSelector";
 import Title from "./components/title";
+import Status from "./components/status";
 import "./App.css";
 
 class App extends Component {
@@ -15,8 +16,11 @@ class App extends Component {
       <React.Fragment>
         <form>
           <div className="row">
-            <div className="col">
+            <div className="col-sm-1.5">
               <Buttons />
+            </div>
+            <div className="col-sm-4.5">
+              <Status />
             </div>
             <div className="col">
               <Title />
