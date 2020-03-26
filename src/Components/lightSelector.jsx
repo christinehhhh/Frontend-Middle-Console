@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { SwatchesPicker } from "react-color";
+import { ChromePicker } from "react-color";
 
 class LightSelector extends Component {
   render() {
@@ -24,7 +24,7 @@ class LightSelector extends Component {
           </select>
         </div>
         <h3>Please Select Light Color:</h3>
-        <SwatchesPicker width={picsWidth} height={picsHeight} />
+        <ChromePicker width={picsWidth} height={picsHeight} />
       </div>
     );
   }
