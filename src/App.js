@@ -5,34 +5,33 @@ import Buttons from "./components/buttons";
 import Login from "./components/login";
 import NotFound from "./components/notFound";
 import LightSelector from "./components/lightSelector";
-import Navbar from "./components/navbar";
+import Title from "./components/title";
 import "./App.css";
 
 class App extends Component {
   state = {};
   render() {
     return (
-      <form>
-        <div className="row">
-          <div className="col">{/* <Navbar /> */}</div>
-        </div>
-        <div className="row">
-          <div className="col">
-            <Buttons />
+      <React.Fragment>
+        <form>
+          <div className="row">
+            <div className="col">
+              <Buttons />
+            </div>
+            <div className="col">
+              <Title />
+              <Switch>
+                <Route path="/musics" component={Musics} />
+                <Route path="/login" component={Login} />
+                <Route path="/not-found" component={NotFound} />
+                <Route path="/color-picker" component={LightSelector} />
+                <Redirect from="/" exact to="/login" />
+                <Redirect to="/not-found" />
+              </Switch>
+            </div>
           </div>
-          <div className="col">
-            <main className="container" />
-            <Switch>
-              <Route path="/musics" component={Musics} />
-              <Route path="/login" component={Login} />
-              <Route path="/not-found" component={NotFound} />
-              <Route path="/color-picker" component={LightSelector} />
-              <Redirect from="/" exact to="/login" />
-              <Redirect to="/not-found" />
-            </Switch>
-          </div>
-        </div>
-      </form>
+        </form>
+      </React.Fragment>
     );
   }
 }
