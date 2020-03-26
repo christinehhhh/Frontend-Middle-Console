@@ -4,7 +4,7 @@ class Battery extends Component {
   constructor() {
     super();
     this.state = {
-      battery: 73
+      battery: 26
     };
   }
 
@@ -24,13 +24,13 @@ class Battery extends Component {
       bat = battery;
     }
 
-    if (battery > 80) {
+    if (bat > 80) {
       var tmp = 0;
-    } else if (battery <= 80 && battery > 60) {
+    } else if (bat <= 80 && bat > 60) {
       tmp = 1;
-    } else if (battery <= 60 && battery > 40) {
+    } else if (bat <= 60 && bat > 40) {
       tmp = 2;
-    } else if (battery <= 40 && battery > 20) {
+    } else if (bat <= 40 && bat > 20) {
       tmp = 3;
     } else {
       tmp = 4;

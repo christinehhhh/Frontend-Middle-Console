@@ -1,7 +1,7 @@
 import React from "react";
 import DarkModeToggle from "./common/darkModeToggle";
-import Clock from "./common/clock";
 import Battery from "./common/battery";
+import Clock from "./common/clock";
 import "../styles.scss";
 
 const Title = () => {
