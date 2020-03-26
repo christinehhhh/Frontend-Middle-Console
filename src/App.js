@@ -7,6 +7,7 @@ import NotFound from "./components/notFound";
 import LightSelector from "./components/lightSelector";
 import Title from "./components/title";
 import Status from "./components/status";
+import Map from "./components/map";
 import "./App.css";
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
                 <Route path="/login" component={Login} />
                 <Route path="/not-found" component={NotFound} />
                 <Route path="/color-picker" component={LightSelector} />
+                <Route path="/map" component={Map} />
                 <Redirect from="/" exact to="/login" />
                 <Redirect to="/not-found" />
               </Switch>
